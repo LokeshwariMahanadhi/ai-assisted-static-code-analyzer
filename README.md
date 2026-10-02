@@ -90,11 +90,8 @@ AI_Code_Reviewer/
 ### 1️⃣ Clone the Repository & Activate Environment
 
 ```bash
-# Windows
-venv\Scripts\activate
-
-# Linux / macOS
-source venv/bin/activate
+git clone https://github.com/LokeshwariMahanadhi/ai-assisted-static-code-analyzer
+cd ai-assisted-static-code-analyzer
 ```
 
 ### 2️⃣ Install Dependencies
