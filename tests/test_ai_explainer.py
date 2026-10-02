@@ -5,6 +5,18 @@ from core.ai_explainer import AIExplainer
 from core.rules import Issue, IssueCategory, IssueSeverity
 
 
+def test_default_gemini_model(monkeypatch):
+    monkeypatch.delenv("GEMINI_MODEL", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    assert AIExplainer().model_name == "gemini-3.8-flash"
+
+
+def test_gemini_model_environment_override(monkeypatch):
+    monkeypatch.setenv("GEMINI_MODEL", "custom-gemini-model")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    assert AIExplainer().model_name == "custom-gemini-model"
+
+
 def test_offline_ai_explanation_generation():
     explainer = AIExplainer(api_key=None)
     assert not explainer.is_ai_connected()

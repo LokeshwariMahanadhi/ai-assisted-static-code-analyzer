@@ -121,7 +121,7 @@ GEMINI_API_KEY=your_actual_gemini_api_key
 ### 🌐 Web Dashboard (Streamlit)
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 Open your browser at `http://localhost:8501`.
 
