@@ -1,0 +1,20 @@
+﻿# Virtual Environment
+venv/
+.venv/
+env/
+
+# Secrets & Environment Variables
+.env
+*.env.local
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# IDE & System
+.vscode/
+.idea/
+*.log
+Thumbs.db
